@@ -1,33 +1,604 @@
-.App {
-  text-align: center;
+@media only screen and (min-width: 100px) {
+    body {
+        background-color: #000;
+    }
+
+    .App {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .App h1, h3, p {
+        text-align: left;
+        color: #fff;
+        font-family: 'Merienda', cursive;
+    }
+
+    .App {
+        min-height: 100vh;
+        width: 100vw;
+
+    }
+
+    .title-div {
+        flex-grow: 1;
+        align-self: flex-start;
+        margin-top: 1em;
+        margin-left: 1em
+    }
+
+    .main-title {
+        color: #0091EA !important;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+
+    .main-sub-title {
+        margin-top: 0;
+    }
+
+    .intro-paragraph-container {
+        flex-grow: 2;
+        margin: 0 1rem 0 1rem;
+        display: flex;
+        min-height: 300px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    div.Typist {
+        align-self: center;
+        height: 300px;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .intro-paragraph {
+        text-align: left;
+    }
+
+    .arrow-down-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .icon-box {
+        min-height: 90px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .arrow-down {
+        visibility: visible;
+        margin-bottom: 1.5em;
+        align-self: flex-end;
+        transition: visibility 1.5s ease, margin 1s ease;
+        fill: #ffeb7f;
+    }
+
+    .arrow-down:hover {
+        cursor: pointer;
+        transition: margin 0.8s ease;
+        margin-bottom: 1em;
+        fill: #ffeb7f;
+    }
+
+    .arrow-down-1:hover {
+        transition: margin 0.8s ease;
+        margin-bottom: 1em;
+        fill: #ffeb7f;
+    }
+
+    .work {
+        min-height: 100vh !important;
+        display: flex;
+        flex-direction: column;
+        background-color: #0091EA;
+        justify-content: center;
+    }
+
+    .work h1 {
+        color: rgb(210, 54, 105) !important;
+        font-family: 'Merienda', cursive;
+    }
+
+    .work-title {
+        text-align: center;
+    }
+    .gone {
+        transition: visibility 1.5s ease;
+        visibility: hidden;
+    }
+
+    .form-container {
+        flex-grow: 1;
+        margin: 0 1rem 0 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form input {
+        border-radius: 0.25em;
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        padding: 0.5em;
+    }
+
+    .contact-form textarea {
+        border-style: inset;
+        font-size: 1.1em;
+        border-radius: 0.25em;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        height: 12em;
+    }
+
+    .contact-form label {
+        font-family: 'Merienda', cursive;
+        font-weight: bold;
+        /*color: rgb(210, 54, 105) !important;*/
+        color: #fff !important;
+    }
+
+    .contact-form button {
+        cursor: pointer;
+        align-self: flex-end;
+        background-color: #ffeb7f;
+        border-radius: 0.25em;
+        width: 10em;
+        font-size: 1.1em;
+        font-family: 'Merienda', cursive;
+    }
+
+    .contact-form button:hover {
+        background-color: #ffe766;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .footer h1 {
+        margin-bottom: 1rem;
+        color: #fff !important;
+    }
+
+    .social {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .github-icon{
+        cursor: pointer;
+        align-self: flex-end;
+        margin-bottom: 1rem;
+        transition: all 0.25s ease;
+        font-size: 100%;
+    }
+
+    .github-icon:hover {
+        transition: all 0.25s ease;
+        font-size: 110%;
+    }
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+@media only screen and (min-width: 600px) {
+    body {
+        background-color: #000;
+    }
+
+    .App {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .App h1, h3, p {
+        text-align: left;
+        color: #fff;
+        font-family: 'Merienda', cursive;
+    }
+
+    .App {
+        min-height: 100vh;
+        width: 100vw;
+
+    }
+
+    .title-div {
+        flex-grow: 1;
+        align-self: flex-start;
+        margin-top: 1em;
+        margin-left: 1em
+    }
+
+    .main-title {
+        color: #0091EA !important;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+
+    .main-sub-title {
+        margin-top: 0;
+    }
+
+    .intro-paragraph-container {
+        flex-grow: 2;
+        display: flex;
+        min-height: 300px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    div.Typist {
+        align-self: center;
+        height: 300px;
+        max-width: 75%;
+        width: 75%;
+        margin: 0;
+    }
+
+    .intro-paragraph {
+        text-align: left;
+    }
+
+    .arrow-down-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .icon-box {
+        min-height: 90px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .arrow-down {
+        visibility: visible;
+        margin-bottom: 1.5em;
+        align-self: flex-end;
+        transition: visibility 1.5s ease, margin 1s ease;
+        fill: #ffeb7f;
+    }
+
+    .arrow-down:hover {
+        cursor: pointer;
+        transition: margin 0.8s ease;
+        margin-bottom: 1em;
+        fill: #ffeb7f;
+    }
+
+    .arrow-down-1:hover {
+        transition: margin 0.8s ease;
+        margin-bottom: 1em;
+        fill: #ffeb7f;
+    }
+
+    .work {
+        min-height: 100vh !important;
+        display: flex;
+        flex-direction: column;
+        background-color: #0091EA;
+        justify-content: center;
+    }
+
+    .work h1 {
+        color: rgb(210, 54, 105) !important;
+        font-family: 'Merienda', cursive;
+    }
+
+    .work-title {
+        text-align: center;
+    }
+    .gone {
+        transition: visibility 1.5s ease;
+        visibility: hidden;
+    }
+
+    .form-container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-form {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form input {
+        border-radius: 0.25em;
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        padding: 0.5em;
+    }
+
+    .contact-form textarea {
+        border-style: inset;
+        font-size: 1.1em;
+        border-radius: 0.25em;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        height: 12em;
+    }
+
+    .contact-form label {
+        font-family: 'Merienda', cursive;
+        font-weight: bold;
+        /*color: rgb(210, 54, 105) !important;*/
+        color: #fff !important;
+    }
+
+    .contact-form button {
+        cursor: pointer;
+        align-self: flex-end;
+        background-color: #ffeb7f;
+        border-radius: 0.25em;
+        width: 10em;
+        font-size: 1.1em;
+        font-family: 'Merienda', cursive;
+    }
+
+    .contact-form button:hover {
+        background-color: #ffe766;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .footer h1 {
+        margin-bottom: 1rem;
+        color: #fff !important;
+    }
+
+    .social {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .github-icon{
+        cursor: pointer;
+        align-self: flex-end;
+        margin-bottom: 1rem;
+        transition: all 0.25s ease;
+        font-size: 100%;
+    }
+
+    .github-icon:hover {
+        transition: all 0.25s ease;
+        font-size: 110%;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media only screen and (min-width: 1150px) {
+    body {
+        background-color: #000;
+    }
 
-.App-link {
-  color: #61dafb;
-}
+    .App {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .App h1, h3, p {
+        text-align: left;
+        color: #fff;
+        font-family: 'Merienda', cursive;
+    }
+
+    .App {
+        min-height: 100vh;
+        width: 100vw;
+
+    }
+
+    .title-div {
+        flex-grow: 1;
+        align-self: flex-start;
+        margin-top: 1em;
+        margin-left: 1em
+    }
+
+    .main-title {
+        color: #0091EA !important;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+
+    .main-sub-title {
+        margin-top: 0;
+    }
+
+    .intro-paragraph-container {
+        flex-grow: 2;
+        display: flex;
+        min-height: 300px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    div.Typist {
+        align-self: center;
+        height: 300px;
+        max-width: 50%;
+        width: 50%;
+        margin: 0;
+    }
+
+    .intro-paragraph {
+        text-align: left;
+    }
+
+    .arrow-down-container {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .icon-box {
+        min-height: 90px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .arrow-down {
+        visibility: visible;
+        margin-bottom: 1.5em;
+        align-self: flex-end;
+        transition: visibility 1.5s ease, margin 1s ease;
+        fill: #ffeb7f;
+    }
+
+    .arrow-down:hover {
+        cursor: pointer;
+        transition: margin 0.8s ease;
+        margin-bottom: 1em;
+        fill: #ffeb7f;
+    }
+
+    .arrow-down-1:hover {
+        transition: margin 0.8s ease;
+        margin-bottom: 1em;
+        fill: #ffeb7f;
+    }
+
+    .work {
+        min-height: 100vh !important;
+        display: flex;
+        flex-direction: column;
+        background-color: #0091EA;
+        justify-content: center;
+    }
+
+    .work h1 {
+        color: rgb(210, 54, 105) !important;
+        font-family: 'Merienda', cursive;
+    }
+
+    .work-title {
+        text-align: center;
+    }
+    .gone {
+        transition: visibility 1.5s ease;
+        visibility: hidden;
+    }
+
+    .form-container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form input {
+        border-radius: 0.25em;
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        padding: 0.5em;
+    }
+
+    .contact-form textarea {
+        border-style: inset;
+        font-size: 1.1em;
+        border-radius: 0.25em;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        height: 12em;
+    }
+
+    .contact-form label {
+        font-family: 'Merienda', cursive;
+        font-weight: bold;
+        /*color: rgb(210, 54, 105) !important;*/
+        color: #fff !important;
+    }
+
+    .contact-form button {
+        cursor: pointer;
+        align-self: flex-end;
+        background-color: #ffeb7f;
+        border-radius: 0.25em;
+        width: 10em;
+        font-size: 1.1em;
+        font-family: 'Merienda', cursive;
+    }
+
+    .contact-form button:hover {
+        background-color: #ffe766;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .footer h1 {
+        margin-bottom: 1rem;
+        color: #fff !important;
+    }
+
+    .social {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .github-icon{
+        cursor: pointer;
+        align-self: flex-end;
+        margin-bottom: 1rem;
+        transition: all 0.25s ease;
+        font-size: 100%;
+    }
+
+    .github-icon:hover {
+        transition: all 0.25s ease;
+        font-size: 110%;
+    }
 }
