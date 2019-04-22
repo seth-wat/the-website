@@ -2,19 +2,19 @@ body {
     background-color: #000;
 }
 
-.App {
+.intro-section {
     align-content: center;
     display: flex;
     flex-direction: column;
 }
 
-.App h1, h3, p {
+.intro-section h1, h3, p {
     text-align: left;
     color: #fff;
     font-family: 'Merienda', cursive;
 }
 
-.App {
+.intro-section {
     min-height: 100vh;
     width: 100vw;
 
@@ -93,7 +93,7 @@ div.Typist {
     fill: #ffeb7f;
 }
 
-.work {
+.contact-section {
     min-height: 100vh !important;
     display: flex;
     flex-direction: column;
@@ -101,7 +101,7 @@ div.Typist {
     justify-content: center;
 }
 
-.work h1 {
+.contact-section h1 {
     color: rgb(210, 54, 105) !important;
     font-family: 'Merienda', cursive;
 }
@@ -180,7 +180,7 @@ div.Typist {
     background-color: #ffe766;
 }
 
-.footer {
+.contact-section-header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -188,7 +188,7 @@ div.Typist {
     text-align: center;
 }
 
-.footer h1 {
+.contact-section-header h1 {
     margin-bottom: 1rem;
     color: #fff !important;
 }
