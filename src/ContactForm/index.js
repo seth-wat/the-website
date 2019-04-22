@@ -6,9 +6,29 @@ export const ContactForm = (props) => {
 
     const {nameError, emailError, messageError, validator, clearError} = useContactFormError()
     const {nameValue, emailValue, messageValue, setNameValue, setEmailValue, setMessageValue} = useContactFormValues()
-
+    const [isLoading, setLoading] = useState(false)
     return (
-        <form className='contact-form' onSubmit={(e) => e.preventDefault()}>
+        <form className='contact-form' onSubmit={async (e) => {
+
+            e.preventDefault()
+            validator(nameValue, 'name')
+            validator(nameValue, 'email')
+            validator(nameValue, 'message')
+            if(nameValue && emailValue && messageValue) {
+                setLoading(true)
+                try {
+                    await fetch(process.env.REACT_APP_EMAIL_ENDPOINT, {
+                        method: 'post',
+                        body: JSON.stringify({name: nameValue, email: emailValue, content: messageValue})
+                    })
+                    setLoading(false)
+                } catch(e) {
+                    setLoading(false)
+                }
+
+            }
+
+        }}>
             <div className='form-element'>
                 <label>Name:</label>
                 <input type='text' className={nameError.length ? 'input-error' : ''} placeholder='name'
@@ -43,9 +63,10 @@ export const ContactForm = (props) => {
                 {messageError && <label className='error-label'>{messageError}</label>}
             </div>
             <div className='submit-container'>
-                <IconContext.Provider value={{color: '#ffeb7f', className: 'spinner', size: '1.25rem'}}>
+                {isLoading && <IconContext.Provider value={{color: '#ffeb7f', className: 'spinner', size: '1.25rem'}}>
                     <FaSpinner/>
                 </IconContext.Provider>
+                }
                 <button>Send</button>
             </div>
         </form>
