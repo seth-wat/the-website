@@ -553,7 +553,10 @@
         /*color: rgb(210, 54, 105) !important;*/
         color: #fff !important;
     }
-
+    .submit-container {
+        display: flex;
+        justify-content: flex-end;
+    }
     .contact-form button {
         cursor: pointer;
         align-self: flex-end;
@@ -600,5 +603,23 @@
     .github-icon:hover {
         transition: all 0.25s ease;
         font-size: 110%;
+    }
+}
+
+.spinner {
+    align-self: center;
+    margin-right: 1rem;
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
     }
 }

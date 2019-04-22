@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import './App.css';
 import Typist from 'react-typist'
 import {GoArrowDown} from 'react-icons/go';
-import {FaGithub} from "react-icons/fa";
+import {FaGithub, FaSpinner} from "react-icons/fa";
 import {IconContext} from "react-icons/lib";
+import {ContactForm} from "./ContactForm";
 
 export const App = () => {
 
@@ -57,15 +58,7 @@ export const App = () => {
                     <h1>Lets start a conversation</h1>
                 </div>
                 <div className='form-container'>
-                    <form className='contact-form' onSubmit={(e) => e.preventDefault()}>
-                        <label>Name:</label>
-                        <input type='text' placeholder='name'/>
-                        <label>Email:</label>
-                        <input type='text' placeholder='email'/>
-                        <label>Message:</label>
-                        <textarea/>
-                        <button>Send</button>
-                    </form>
+                    <ContactForm/>
                 </div>
                 <div className='social'>
                     <div className='icon-box'>
