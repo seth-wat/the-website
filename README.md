@@ -1,8 +1,6 @@
 ### Personal Website - React
 
-The goal behind this project was to use very few libraries and
-write out the vast majority from scratch.
-
+https://seth-wat.github.io
 
  * Hand rolled design with vanilla CSS.
     * *Toasts powered by [react-toastify](https://github.com/fkhadra/react-toastify)*
