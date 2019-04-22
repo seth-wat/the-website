@@ -533,20 +533,30 @@
 
     .contact-form input {
         border-radius: 0.25em;
-        margin-bottom: 1em;
         font-size: 1.1em;
+        margin-bottom: 0;
         padding: 0.5em;
     }
 
+    .input-error {
+        border-color: #FF3D00;
+    }
+
     .contact-form textarea {
+        margin-bottom: 0;
+
         border-style: inset;
         font-size: 1.1em;
         border-radius: 0.25em;
-        margin-bottom: 1em;
         padding: 0.5em;
         height: 12em;
     }
 
+    .form-element {
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+    }
     .contact-form label {
         font-family: 'Merienda', cursive;
         font-weight: bold;
@@ -613,6 +623,10 @@
     animation-duration: 2000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.error-label {
+    margin-top: 0.1rem;
 }
 
 @keyframes spin {

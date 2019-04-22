@@ -7,26 +7,41 @@ export const ContactForm = (props) => {
     const {nameError, emailError, messageError, validator, clearError} = useContactFormError()
     const {nameValue, emailValue, messageValue, setNameValue, setEmailValue, setMessageValue} = useContactFormValues()
 
-    return(
+    return (
         <form className='contact-form' onSubmit={(e) => e.preventDefault()}>
-            <label>Name:</label>
-            <input type='text' placeholder='name' value={nameValue} onChange={(e) => {
-                setNameValue(e.target.value)
-                nameError && clearError('name')
-            }} onBlur={() => {validator(nameValue, 'name')}}/>
-            {nameError && nameError}
-            <label>Email:</label>
-            <input type='text' placeholder='email' value={emailValue} onChange={(e) => {
-                setEmailValue(e.target.value)
-                emailError && clearError('email')
-            }} onBlur={() => {validator(emailValue, 'email')}}/>
-            {emailError && emailError}
-            <label>Message:</label>
-            <textarea value={messageValue} onChange={(e) => {
-                setMessageValue(e.target.value)
-                messageError && clearError('message')
-            }} onBlur={() => {validator(messageValue, 'message')}}/>
-            {messageError && messageError}
+            <div className='form-element'>
+                <label>Name:</label>
+                <input type='text' className={nameError.length ? 'input-error' : ''} placeholder='name'
+                       value={nameValue} onChange={(e) => {
+                    setNameValue(e.target.value)
+                    nameError && clearError('name')
+                }} onBlur={() => {
+                    validator(nameValue, 'name')
+                }}/>
+                {nameError &&
+                <label className='error-label'>{nameError}</label>}
+            </div>
+            <div className='form-element'>
+                <label>Email:</label>
+                <input type='text' className={emailError.length ? 'input-error' : ''} placeholder='email'
+                       value={emailValue} onChange={(e) => {
+                    setEmailValue(e.target.value)
+                    emailError && clearError('email')
+                }} onBlur={() => {
+                    validator(emailValue, 'email')
+                }}/>
+                {emailError && <label className='error-label'>{emailError}</label>}
+            </div>
+            <div className='form-element'>
+                <label>Message:</label>
+                <textarea className={messageError.length ? 'input-error' : ''} value={messageValue} onChange={(e) => {
+                    setMessageValue(e.target.value)
+                    messageError && clearError('message')
+                }} onBlur={() => {
+                    validator(messageValue, 'message')
+                }}/>
+                {messageError && <label className='error-label'>{messageError}</label>}
+            </div>
             <div className='submit-container'>
                 <IconContext.Provider value={{color: '#ffeb7f', className: 'spinner', size: '1.25rem'}}>
                     <FaSpinner/>
@@ -45,9 +60,9 @@ export const useContactFormError = () => {
 
     const validator = (value, type) => {
         const typeMap = {
-            name: {set: setNameError, msg: 'Name cannot be blank'},
-            email: {set: setEmailError, msg: 'Email cannot be blank'},
-            message: {set: setMessageError, msg: 'Message cannot be blank'}
+            name: {set: setNameError, msg: 'How should I address you?'},
+            email: {set: setEmailError, msg: 'I\'ll need a return address!'},
+            message: {set: setMessageError, msg: 'Don\'t forget your message!'}
         }
 
         const {set, msg} = typeMap[type]
