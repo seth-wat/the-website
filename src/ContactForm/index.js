@@ -1,6 +1,8 @@
 import {FaSpinner} from "react-icons/fa";
 import React, {useState} from "react";
 import {IconContext} from "react-icons/lib";
+import {toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.min.css';
 
 export const ContactForm = (props) => {
 
@@ -9,7 +11,6 @@ export const ContactForm = (props) => {
     const [isLoading, setLoading] = useState(false)
     return (
         <form className='contact-form' onSubmit={async (e) => {
-
             e.preventDefault()
             validator(nameValue, 'name')
             validator(nameValue, 'email')
@@ -22,12 +23,29 @@ export const ContactForm = (props) => {
                         body: JSON.stringify({name: nameValue, email: emailValue, content: messageValue})
                     })
                     setLoading(false)
+                    toast('Thank you, I\'ll be in touch!', {
+                        className: "toast",
+                        position: "top-left",
+                        autoClose: 5000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                    });
                 } catch(e) {
                     setLoading(false)
+                    toast.error('The request failed, please re-submit.', {
+                        className: "toast",
+                        position: "top-left",
+                        autoClose: 5000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                    });
                 }
 
             }
-
         }}>
             <div className='form-element'>
                 <label>Name:</label>

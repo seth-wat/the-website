@@ -629,6 +629,9 @@
     margin-top: 0.1rem;
 }
 
+.toast {
+    font-family: 'Merienda', cursive !important;
+}
 @keyframes spin {
     from {
         transform:rotate(0deg);

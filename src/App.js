@@ -5,6 +5,7 @@ import {GoArrowDown} from 'react-icons/go';
 import {FaGithub, FaSpinner} from "react-icons/fa";
 import {IconContext} from "react-icons/lib";
 import {ContactForm} from "./ContactForm";
+import {ToastContainer} from "react-toastify";
 
 export const App = () => {
 
@@ -12,6 +13,17 @@ export const App = () => {
 
     return (
         <React.Fragment>
+            <ToastContainer
+                position="top-left"
+                autoClose={5000}
+                hideProgressBar
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnVisibilityChange
+                draggable
+                pauseOnHover
+            />
             <div className="App">
                 <div className='title-div'>
                     <h1 className='main-title'>Seth R. Watkins</h1>
