@@ -1,4 +1,4 @@
-###Personal Website - React
+### Personal Website - React
 
 The goal behind this project was to use very few libraries and
 write out the vast majority from scratch.
