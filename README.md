@@ -1,8 +1,12 @@
-**WIP**
+###Personal Website - React
 
-This is my personal website built in React.
+The goal behind this project was to use very few libraries and
+write out the vast majority from scratch.
 
-Features:
+
  * Hand rolled design with vanilla CSS.
- * Contact form with a little Expresss app to handle the submissions.
+    * *Toasts powered by [react-toastify](https://github.com/fkhadra/react-toastify)*
+ * Contact form for inquiries.
+    * Powered by the serverless API I built [here](https://github.com/seth-wat/the-website-backend).
+    * Custom validation and error handling with hooks.
  
