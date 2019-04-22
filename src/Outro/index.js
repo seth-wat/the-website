@@ -10,7 +10,7 @@ export const Outro = (props) => {
                 color: "white", size: "3em", className: props.isTyping ? 'gone' : 'arrow-down'
             }}>
                 <GoArrowDown onClick={() => {
-                    const work = document.querySelector('.work')
+                    const work = document.querySelector('.contact-section')
                     work.scrollIntoView({behavior: 'smooth'})
                 }}/>
             </IconContext.Provider>

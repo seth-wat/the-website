@@ -16,6 +16,7 @@ body {
 
 .intro-section {
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     width: 100vw;
 
 }
@@ -95,6 +96,7 @@ div.Typist {
 
 .contact-section {
     min-height: 100vh !important;
+    min-height: calc(var(--vh, 1vh) * 100) !important;
     display: flex;
     flex-direction: column;
     background-color: #0091EA;
