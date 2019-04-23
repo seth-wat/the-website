@@ -18,7 +18,7 @@ export const Intro = (props) => {
                 <br/>
                 <Typist.Delay ms={500}/>
                 Blending these traits into highly stable, <Typist.Delay
-                ms={500}/>deployable, <Typist.Delay ms={500}/>and reproducible software is what it
+                ms={500}/>deployable, <Typist.Delay ms={500}/>and maintainable software is what it
                 takes,<Typist.Delay ms={500}/> and what I enjoy.
             </p>
         </Typist>
