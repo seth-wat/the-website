@@ -133,25 +133,19 @@ export const useContactFormError = () => {
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
 
-  const validator = (value, type) => {
-    const typeMap = {
-      name: { set: setNameError, msg: "How should I address you?" },
-      email: { set: setEmailError, msg: "I'll need a return address!" },
-      message: { set: setMessageError, msg: "Don't forget your message!" }
-    };
+  const errorHandlers = {
+    name: { set: setNameError, msg: "How should I address you?" },
+    email: { set: setEmailError, msg: "I'll need a return address!" },
+    message: { set: setMessageError, msg: "Don't forget your message!" }
+  };
 
-    const { set, msg } = typeMap[type];
+  const validator = (value, type) => {
+    const { set, msg } = errorHandlers[type];
     value.length ? set("") : set(msg);
   };
 
   const clearError = type => {
-    const typeMap = {
-      name: setNameError,
-      email: setEmailError,
-      message: setMessageError
-    };
-
-    typeMap[type]("");
+    errorHandlers[type].set("");
   };
 
   return { nameError, emailError, messageError, validator, clearError };
